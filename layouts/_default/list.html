@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+   <div class="row">
+      <div class="col">
+
+   {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+   <article>
+      <header>
+         <h2>{{.Title}}</h2>
+      </header>
+      {{.Content}}
+   </article>
+
+   <ul>
+   {{ range $paginator.Pages }}
+      <li class="blogentries">
+         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+
+         <p>
+            <small>{{ .Date.Format "02.01.2006 15:04" }}</small>
+         </p>
+
+         {{ .Summary }}
+
+         <a class="readmore" href="{{ .RelPermalink }}">Weiterlesen</a>
+      </li>
+   {{ end }}
+   </ul>
+
+   {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+      {{ if .Paginator.HasNext }}
+         <a href="{{ .Next }}">&larr; Ältere Beiträge&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      {{ end }}
+
+      {{ if .Paginator.HasPrev }}
+         <a href="{{ .Prev }}">Neuere Beiträge &rarr;</a>
+      {{ end }}
+   {{ end }}
+
+      </div>
+   </div>
+{{ end }}

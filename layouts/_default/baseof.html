@@ -1,0 +1,12 @@
+<!-- Header -->
+{{ partial "header.html" . }}
+
+<!-- Content -->
+<div class="container">
+   <main id="main" role="main" class="flex-shrink-0">
+   {{- block "main" . }}{{- end }}
+   </main>
+</div>
+
+<!-- Footer -->
+{{ partial "footer.html" . }}

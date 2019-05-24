@@ -1,0 +1,44 @@
+baseURL = "http://example.org/"
+languageCode = "de-de"
+title = "Hugo-Micmun"
+theme = "hugo-micmun"
+
+Paginate = 5
+
+[params]
+   author = "MicMun"
+   description = "demo of theme hugo-micmun"
+   keywords = "hugo,theme,micmun,website,blog"
+
+[menu]
+   [[menu.main]]
+      name = "Home"
+      url = "/"
+      weight = 100
+   # blog: you must create a posts/_index.md with title == name for navigation to work the right way
+   [[menu.main]]
+      name = "Blog"
+      url = "/posts/"
+      weight = 110
+   [[menu.main]]
+      name = "About"
+      url = "/about/"
+      weight = 120
+
+   # name and title must exist, because of footer navigation template.
+   [[menu.footer]]
+      name = "Impressum"
+      title = "Impressum"
+      url = "/impressum/"
+      weight = 100
+   [[menu.footer]]
+      name = "Data Protection"
+      title = "Data Protection"
+      url = "/data-protection/"
+      weight = 110
+
+[permalinks]
+   pages = "/:slug/"
+
+[taxonomies]
+   tag = "tags"

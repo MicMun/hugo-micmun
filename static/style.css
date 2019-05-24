@@ -1,0 +1,58 @@
+/* Style */
+html {
+   height: 100%;
+   width: 100%;
+}
+
+body {
+   position: relative;
+   margin: 0;
+   padding-bottom: 6rem;
+   min-height: 100%;
+   width: 100%;
+   background-color: #E6E6E6;
+}
+
+main {
+   width: 100%;
+}
+
+.container {
+   width: 90%;
+   padding: 70px 15px 0;
+}
+
+.losungen {
+   height: auto;
+   background-color: #D8D8D8;
+   border-right: 2px solid black;
+}
+
+.readmore {
+   font-size: 80%;
+   margin: 0;
+   color: #FF8000;
+}
+
+.blogentries {
+   list-style: none;
+   margin-bottom: 15px;
+}
+
+.blogentries h3 > a {
+   color: black;
+}
+
+.tags > li {
+   display: inline;
+   list-style: none;
+}
+
+.footer {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   padding: 1rem;
+   text-align: center;
+}

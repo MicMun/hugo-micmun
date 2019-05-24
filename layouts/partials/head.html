@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<base href="{{ .Site.BaseURL }}">
+<title>{{ if .IsHome }} {{ .Site.Title }} {{ else }} {{ .Site.Title }} | {{ .Title }} {{ end }}</title>
+<meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+{{ if .Site.Params.keywords }}<meta name="keywords" content="{{ .Site.Params.keywords }}" />{{ end }}
+{{ if .Site.Params.author }}<meta name="author" content="{{ .Site.Params.author }}">{{ end }}
+
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/fork-awesome.min.css">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}style.css">
+<link rel="canonical" href="{{ .Permalink }}">
+<link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />

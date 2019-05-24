@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+   <div class="row">
+      <div class="col">
+         {{ if eq .Type "posts" }}
+            {{ partial "blog.html" . }}
+         {{ else }}
+            {{ .Content }}
+         {{ end }}
+      </div>
+   </div>
+
+{{ end }}
