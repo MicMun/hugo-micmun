@@ -43,6 +43,16 @@ main {
    color: black;
 }
 
+.blogimg-left {
+   float: left;
+   margin-right: 30px;
+}
+
+.blogimg-right {
+   float: right;
+   margin-left: 30px;
+}
+
 .tags > li {
    display: inline;
    list-style: none;
